@@ -2,6 +2,8 @@ package org.registrationservice.domain.model;
 
 import lombok.Builder;
 import lombok.Data;
+import org.commonlibs.event.ElectiveStatus;
+import org.commonlibs.event.UniversitySubject;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

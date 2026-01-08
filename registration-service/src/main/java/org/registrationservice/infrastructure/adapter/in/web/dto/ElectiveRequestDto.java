@@ -1,6 +1,6 @@
 package org.registrationservice.infrastructure.adapter.in.web.dto;
 
-import org.registrationservice.domain.model.UniversitySubject;
+import org.commonlibs.event.UniversitySubject;
 
 public record ElectiveRequestDto(
         UniversitySubject subject

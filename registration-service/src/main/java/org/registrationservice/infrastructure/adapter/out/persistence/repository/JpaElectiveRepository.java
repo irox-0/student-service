@@ -1,6 +1,6 @@
 package org.registrationservice.infrastructure.adapter.out.persistence.repository;
 
-import org.registrationservice.domain.model.UniversitySubject;
+import org.commonlibs.event.UniversitySubject;
 import org.registrationservice.infrastructure.adapter.out.persistence.entity.ElectiveEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 

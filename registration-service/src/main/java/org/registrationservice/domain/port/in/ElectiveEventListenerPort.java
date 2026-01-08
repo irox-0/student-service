@@ -1,6 +1,7 @@
 package org.registrationservice.domain.port.in;
 
-import org.registrationservice.domain.event.TeacherFoundEvent;
+
+import org.commonlibs.event.TeacherFoundEvent;
 
 public interface ElectiveEventListenerPort {
     void listen(TeacherFoundEvent event);

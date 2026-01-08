@@ -1,4 +1,4 @@
-package org.registrationservice.domain.model;
+package org.commonlibs.event;
 
 public enum ElectiveStatus {
     SUBMITTED,

@@ -2,8 +2,8 @@ package org.registrationservice.infrastructure.adapter.out.persistence.repositor
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.commonlibs.event.UniversitySubject;
 import org.registrationservice.domain.model.Elective;
-import org.registrationservice.domain.model.UniversitySubject;
 import org.registrationservice.domain.port.out.ElectiveRepository;
 import org.registrationservice.infrastructure.adapter.out.persistence.entity.ElectiveEntity;
 import org.registrationservice.infrastructure.adapter.out.persistence.mapper.ElectiveEntityMapper;

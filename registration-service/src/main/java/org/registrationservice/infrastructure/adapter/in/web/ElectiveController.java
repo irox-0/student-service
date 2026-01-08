@@ -2,8 +2,8 @@ package org.registrationservice.infrastructure.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.commonlibs.event.UniversitySubject;
 import org.registrationservice.domain.model.Elective;
-import org.registrationservice.domain.model.UniversitySubject;
 import org.registrationservice.domain.port.in.ElectiveManagementPort;
 import org.registrationservice.infrastructure.adapter.in.web.dto.ElectiveEventResponseDto;
 import org.registrationservice.infrastructure.adapter.in.web.dto.ElectiveRequestDto;

@@ -3,8 +3,8 @@ package org.registrationservice.infrastructure.adapter.out.persistence.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.registrationservice.domain.model.ElectiveStatus;
-import org.registrationservice.domain.model.UniversitySubject;
+import org.commonlibs.event.ElectiveStatus;
+import org.commonlibs.event.UniversitySubject;
 
 import java.time.LocalDateTime;
 

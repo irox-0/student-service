@@ -2,10 +2,11 @@ package org.registrationservice.application.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.commonlibs.event.ElectiveStatus;
+import org.commonlibs.event.UniversitySubject;
 import org.registrationservice.domain.model.Elective;
-import org.registrationservice.domain.model.ElectiveStatus;
-import org.registrationservice.domain.model.UniversitySubject;
 import org.registrationservice.domain.port.in.ElectiveManagementPort;
+import org.registrationservice.domain.port.out.ElectiveEventProducerPort;
 import org.registrationservice.domain.port.out.ElectiveRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.UUID;
 public class ElectiveManagementService implements ElectiveManagementPort {
 
     private final ElectiveRepository repository;
+    private final ElectiveEventProducerPort publisherPort;
 
     @Override
     public Elective create(UniversitySubject subject) {
@@ -28,6 +30,7 @@ public class ElectiveManagementService implements ElectiveManagementPort {
                 .build();
 
         log.info("Elective created: elective={}", elective);
+        publisherPort.produce(elective);
         return repository.save(elective);
     }
 
@@ -39,4 +42,5 @@ public class ElectiveManagementService implements ElectiveManagementPort {
     public Optional<Elective> get(UniversitySubject subject) {
         return repository.read(subject);
     }
+
 }

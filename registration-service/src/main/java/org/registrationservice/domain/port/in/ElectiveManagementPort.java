@@ -1,7 +1,7 @@
 package org.registrationservice.domain.port.in;
 
+import org.commonlibs.event.UniversitySubject;
 import org.registrationservice.domain.model.Elective;
-import org.registrationservice.domain.model.UniversitySubject;
 
 import java.util.Optional;
 
