@@ -1,4 +1,4 @@
-package org.registrationservice.infrastructure.adapter.in.dto;
+package org.registrationservice.infrastructure.adapter.in.web.dto;
 
 import org.registrationservice.domain.model.UniversitySubject;
 
