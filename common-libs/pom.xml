@@ -11,22 +11,14 @@
     </parent>
 
     <artifactId>common-libs</artifactId>
+    <packaging>jar</packaging>
     <name>Common Libraries</name>
     <description>Shared DTOs, events, and utilities</description>
 
-    <!-- НЕ Spring Boot приложение — просто JAR библиотека -->
-
     <dependencies>
-        <!-- Только то, что нужно для DTO/Events -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -36,7 +28,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
-            <!-- НЕ нужен spring-boot-maven-plugin для библиотеки -->
         </plugins>
     </build>
 </project>

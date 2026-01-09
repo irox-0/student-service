@@ -26,12 +26,11 @@
 
         <spring-boot.version>4.0.1</spring-boot.version>
         <mapstruct.version>1.6.3</mapstruct.version>
-        <lombok.version>1.18.36</lombok.version>
+        <lombok.version>1.18.38</lombok.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Boot BOM -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -40,14 +39,12 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- Internal modules -->
             <dependency>
                 <groupId>org.studentservice</groupId>
                 <artifactId>common-libs</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- MapStruct -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
@@ -56,7 +53,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- Common dependencies for all modules -->
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -78,7 +74,7 @@
                             <path>
                                 <groupId>org.projectlombok</groupId>
                                 <artifactId>lombok</artifactId>
-                                <verddsion>${lombok.version}</verddsion>
+                                <version>${lombok.version}</version>
                             </path>
                             <path>
                                 <groupId>org.mapstruct</groupId>
@@ -91,19 +87,6 @@
                                 <version>0.2.0</version>
                             </path>
                         </annotationProcessorPaths>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot.version}</version>
-                    <configuration>
-                        <excludes>
-                            <exclude>
-                                <groupId>org.projectlombok</groupId>
-                                <artifactId>lombok</artifactId>
-                            </exclude>
-                        </excludes>
                     </configuration>
                 </plugin>
             </plugins>
