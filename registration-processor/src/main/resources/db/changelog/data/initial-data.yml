@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: dev
+      changes:
+        - createTable:
+            tableName: teachers
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: subject
+                  type: VARCHAR(50)
+              - column:
+                  name: possible_time
+                  type: TIMESTAMP
+
+  - changeSet:
+      id: 3
+      author: dev
+      changes:
+        - insert:
+            tableName: teachers
+            columns:
+              - column:
+                  name: name
+                  value: "Иван Петров"
+              - column:
+                  name: subject
+                  value: "MATH"
+              - column:
+                  name: possible_time
+                  value: "2024-01-15T10:00:00"
+
+        - insert:
+            tableName: teachers
+            columns:
+              - column:
+                  name: name
+                  value: "Мария Сидорова"
+              - column:
+                  name: subject
+                  value: "ENGLISH"
+              - column:
+                  name: possible_time
+                  value: "2024-01-16T14:30:00"
+
+        - insert:
+            tableName: teachers
+            columns:
+              - column:
+                  name: name
+                  value: "Алексей Иванов"
+              - column:
+                  name: subject
+                  value: "PHYSICS"
+              - column:
+                  name: possible_time
+                  value: "2024-01-17T09:00:00"
+
+        - insert:
+            tableName: teachers
+            columns:
+              - column:
+                  name: name
+                  value: "Ольга Николаева"
+              - column:
+                  name: subject
+                  value: "ALGORITHMS"
+              - column:
+                  name: possible_time
+                  value: "2024-01-18T11:45:00"

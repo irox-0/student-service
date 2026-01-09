@@ -7,6 +7,7 @@ import org.commonlibs.event.ElectiveStatus;
 import org.commonlibs.event.UniversitySubject;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -14,9 +15,8 @@ import java.time.LocalDateTime;
 @Table(name = "electives")
 public class ElectiveEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
-    private Long id;
+    private UUID id;
 
     @Column(name = "subject")
     @Enumerated(EnumType.STRING)

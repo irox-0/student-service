@@ -1,4 +1,4 @@
-package org.registrationservice.domain.mapper;
+package org.registrationservice.application.mapper;
 
 import org.commonlibs.event.TeacherSearchEvent;
 import org.mapstruct.Mapper;

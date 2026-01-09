@@ -14,15 +14,16 @@ import java.util.Optional;
 @Repository
 @RequiredArgsConstructor
 @Slf4j
-public class JpaElectiveAdapter implements ElectiveRepository {
+public class JpaElectiveRepositoryAdapter implements ElectiveRepository {
     private final JpaElectiveRepository repository;
     private final ElectiveEntityMapper mapper;
 
     @Override
     public Elective save(Elective elective) {
+        log.info("Elective to save: {}", elective);
         ElectiveEntity entity = mapper.toEntity(elective);
         ElectiveEntity saved = repository.save(entity);
-        log.debug("ElectiveEntity saved: {}", saved);
+        log.info("ElectiveEntity saved: {}", saved);
         return mapper.toModel(saved);
     }
 

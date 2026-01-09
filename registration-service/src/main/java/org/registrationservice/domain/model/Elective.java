@@ -2,6 +2,7 @@ package org.registrationservice.domain.model;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 import org.commonlibs.event.ElectiveStatus;
 import org.commonlibs.event.UniversitySubject;
 
@@ -10,6 +11,7 @@ import java.util.UUID;
 
 @Data
 @Builder
+@Accessors(chain = true)
 public class Elective {
     private UUID id;
     private UniversitySubject subject;

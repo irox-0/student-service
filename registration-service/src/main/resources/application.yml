@@ -14,3 +14,5 @@ spring:
     bootstrap-servers: localhost:9092
 server:
   port: 8080
+
+teacher-not-found: NOT_FOUND

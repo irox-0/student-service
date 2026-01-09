@@ -1,7 +1,7 @@
 package org.registrationservice.domain.port.out;
 
-import org.registrationservice.domain.model.Elective;
+import org.commonlibs.event.TeacherSearchEvent;
 
 public interface ElectiveEventProducerPort {
-    void produce(Elective elective);
+    void produce(TeacherSearchEvent event);
 }

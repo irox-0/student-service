@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 @Builder
 public record TeacherFoundEvent(
         String id,
+        UniversitySubject subject,
         String teacherName,
-        LocalDateTime time
+        LocalDateTime date
 ) {}

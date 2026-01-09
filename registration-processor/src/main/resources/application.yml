@@ -6,11 +6,15 @@ spring:
     password: root
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
   kafka:
     consumer:
       group-id: registration-processor-group
-
     bootstrap-servers: localhost:9092
+  liquibase:
+    change-log: classpath:/db/changelog/data/initial-data.yml
+    enabled: true
 server:
   port: 8081
+
+teacher-not-found: NOT_FOUND
