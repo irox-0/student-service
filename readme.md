@@ -150,7 +150,7 @@ Content-Type: application/json
 }
 ```
 
-**Ответ (201 Created):**
+**Ответ (200 OK):**
 ```json
 {
   "subject": "MATH",
