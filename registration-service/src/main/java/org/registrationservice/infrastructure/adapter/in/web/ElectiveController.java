@@ -23,7 +23,7 @@ public class ElectiveController {
     private final ElectiveManagementPort electiveManagementPort;
     private final ElectiveDtoMapper mapper;
 
-    @PostMapping("elective")
+    @PostMapping
     public ResponseEntity<ElectiveResponseDto> createElective(@RequestBody ElectiveRequestDto dto) {
         var optionalElective = electiveManagementPort.get(dto.subject());
         if (optionalElective.isPresent()) {
@@ -35,12 +35,12 @@ public class ElectiveController {
         return new ResponseEntity<>(mapper.toResponseDto(elective), HttpStatus.CREATED);
     }
 
-    @GetMapping("elective/available")
+    @GetMapping("available")
     public ResponseEntity<List<UniversitySubject>> getSubjects() {
         return new ResponseEntity<>(List.of(UniversitySubject.values()), HttpStatus.OK);
     }
 
-    @GetMapping("elective/{subject}")
+    @GetMapping("{subject}")
     public ResponseEntity<ElectiveEventResponseDto> getElectiveEvent(@PathVariable("subject") String subject) {
         UniversitySubject enumSubject = UniversitySubject.valueOf(subject.toUpperCase());
         var optionalElective = electiveManagementPort.get(enumSubject);
