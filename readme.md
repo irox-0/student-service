@@ -142,7 +142,7 @@ docker-compose up --build -d
 
 #### Создать заявку на факультатив
 ```http
-POST /api/elective/create
+POST /api/elective
 Content-Type: application/json
 
 {
@@ -160,7 +160,7 @@ Content-Type: application/json
 
 #### Получить список доступных предметов
 ```http
-GET /api/elective/get/available-subjects
+GET /api/elective/available
 ```
 
 **Ответ:**
@@ -170,12 +170,12 @@ GET /api/elective/get/available-subjects
 
 #### Получить информацию о факультативе по предмету
 ```http
-GET /api/elective/get/by-subject/{subject}
+GET /api/elective/{subject}
 ```
 
 **Пример:**
 ```http
-GET /api/elective/get/by-subject/math
+GET /api/elective/math
 ```
 
 **Ответ (200 OK):**
