@@ -1,7 +1,7 @@
-package org.registrationprocessor.infrastructure.apadter.out.persistance.repository;
+package org.registrationprocessor.infrastructure.adapter.out.persistance.repository;
 
 import org.commonlibs.event.UniversitySubject;
-import org.registrationprocessor.infrastructure.apadter.out.persistance.entity.TeacherEntity;
+import org.registrationprocessor.infrastructure.adapter.out.persistance.entity.TeacherEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,10 +1,10 @@
-package org.registrationprocessor.infrastructure.apadter.out.persistance.repository;
+package org.registrationprocessor.infrastructure.adapter.out.persistance.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.commonlibs.event.UniversitySubject;
 import org.registrationprocessor.domain.model.Teacher;
 import org.registrationprocessor.domain.port.out.TeacherRepository;
-import org.registrationprocessor.infrastructure.apadter.out.persistance.mapper.TeacherEntityMapper;
+import org.registrationprocessor.infrastructure.adapter.out.persistance.mapper.TeacherEntityMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

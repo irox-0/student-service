@@ -59,7 +59,8 @@ public class ElectiveManagementService implements ElectiveManagementPort, Electi
     public void consume(TeacherFoundEvent event) {
         var optionalElective = get(event.subject());
         if (optionalElective.isEmpty()) {
-            throw new RuntimeException();
+            log.warn("Received TeacherFoundEvent for subject {}, but no elective found in database. Skipping.", event.subject());
+            return;
         }
         updateElectiveInfo(optionalElective.get(), event);
     }

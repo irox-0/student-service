@@ -18,7 +18,7 @@ public class ElectiveEntity {
     @Column(name = "id")
     private UUID id;
 
-    @Column(name = "subject")
+    @Column(name = "subject", unique = true)
     @Enumerated(EnumType.STRING)
     private UniversitySubject subject;
 

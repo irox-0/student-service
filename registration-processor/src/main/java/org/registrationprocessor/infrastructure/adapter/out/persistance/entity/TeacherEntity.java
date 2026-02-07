@@ -1,4 +1,4 @@
-package org.registrationprocessor.infrastructure.apadter.out.persistance.entity;
+package org.registrationprocessor.infrastructure.adapter.out.persistance.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

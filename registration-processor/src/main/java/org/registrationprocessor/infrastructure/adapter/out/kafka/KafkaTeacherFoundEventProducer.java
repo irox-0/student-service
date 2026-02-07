@@ -1,4 +1,4 @@
-package org.registrationprocessor.infrastructure.apadter.out.kafka;
+package org.registrationprocessor.infrastructure.adapter.out.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
